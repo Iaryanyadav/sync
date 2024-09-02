@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SyncHub</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Create Event</a></li>
+                <li><a href="#" id="loginBtn">Log In</a></li>
+                <li><a href="#" id="signUpBtn">Sign Up</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <svg class="icon open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                </svg>
+                <svg class="icon close-icon hide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </div>
+        </nav>
+
+        <div class="popup-container" id="loginPopup">
+            <div class="form-login-container">
+                <span class="close-btn" id="loginCloseBtn">&times;</span>
+                <form id="loginForm">
+                    <h2>Log In</h2>
+                    <input type="text" placeholder="Username" required />
+                    <input type="password" placeholder="Password" required />
+                    <button type="submit">Log In</button>
+                    <p style="color: black;">Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+    
+        <div class="popup-container" id="signUpPopup">
+            <div class="form-login-container">
+                <span class="close-btn" id="signUpCloseBtn">&times;</span>
+                <form id="signUpForm">
+                    <h2>Create Account</h2>
+                    <input type="text" placeholder="Username" required />
+                    <input type="email" placeholder="Email" required />
+                    <input type="password" placeholder="Password" required />
+                    <button type="submit">Sign Up</button>
+                    <p style="color: black;">Already have an account? <a href="#" id="switchToLogin">Log In</a></p>
+                </form>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="create-event">
+            <div class="form-container">
+                <div class="image-container">
+                    <img src="https://thumbs.dreamstime.com/b/registration-illustration-tablet-computer-blue-background-49026260.jpg" alt="Event" />
+                </div>
+                <div class="form-content">
+                    <h2>Create Event</h2>
+                    <form id="event-form">
+                        <label for="event-name">Event Name:</label>
+                        <input type="text" id="event-name" name="event-name" required>
+                        
+                        <label for="event-date">Event Date:</label>
+                        <input type="date" id="event-date" name="event-date" required>
+                        
+                        <label for="event-time">Event Time:</label>
+                        <input type="time" id="event-time" name="event-time" required>
+                        
+                        <label for="event-location">Event Location:</label>
+                        <input type="text" id="event-location" name="event-location" required>
+                        
+                        <label for="event-participants">Participants:</label>
+                        <input type="number" id="event-participants" name="event-participants" min="1" required>
+                        
+                        <button type="submit">Create Event</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>    
+
+    <script src="script.js"></script>
+</body>
+</html>
